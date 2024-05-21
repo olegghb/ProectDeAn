@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "exec": "npx cypress open"
+    "exec": "npx cypress open",
+    "run": "npx cypress run" ,
+    "report": "npx allure serve allure-results"
   },
   "keywords": [],
   "author": "",
