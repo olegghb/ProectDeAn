@@ -1,0 +1,22 @@
+{
+  "name": "tumietests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "exec": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-commandline": "^2.29.0",
+    "allure-cypress": "^2.15.1",
+    "cypress": "^13.8.1"
+  },
+  "dependencies": {
+    "cypress-mongodb": "^6.2.0",
+    "mongoose": "^8.3.2"
+  }
+}
