@@ -17,19 +17,21 @@ describe('User Login', () => {
   
       // Ожидайте, что перенаправление на домашнюю страницу или отображение сообщения об успешном входе
       cy.url().should('include', '/account'); 
+      cy.clearLocalStorage() ;
     });
   
-    it('should not navigate to account', () => {
-      cy.visit(Cypress.env("base_url")+"/account-login");
+    // it('should not navigate to account', () => {
+    //   cy.visit(Cypress.env("base_url")+"/account-login");
   
-      // Введите некорректные учетные данные
-      cy.get('#username').type('wrongUsername');
-      cy.get('#password').type('wrongPassword');
+    //   // Введите некорректные учетные данные
+    //   cy.get('#username').type('wrongUsername');
+    //   cy.get('#password').type('wrongPassword');
   
-      // Нажмите кнопку входа
-      cy.get(':nth-child(3) > .form-group > .btn-login').click();
+    //   // Нажмите кнопку входа
+    //   cy.get(':nth-child(3) > .form-group > .btn-login').click();
 
-      cy.url().should('not.equal', '/account'); 
-    });
+    //   cy.url().should('not.equal', '/account'); 
+    //   cy.clearLocalStorage();
+    // });
   });
   

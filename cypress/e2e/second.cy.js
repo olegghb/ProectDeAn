@@ -9,7 +9,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     it('Should display correct data from backend', () => {
         cy.visit(Cypress.env("base_url"));
         cy.get(':nth-child(1) > .product-item > .product-thumb > a > img').click();
-        const productId = "65d217710e443b9844709b67";
+        const productId = "65d217cc0e443b9844719634";
 
         cy.request("GET", `${Cypress.env("backend")}/fetch-products/${productId}`).then(res => {
             const body = res.body;
